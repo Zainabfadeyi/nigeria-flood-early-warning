@@ -1,0 +1,10 @@
+[
+  {
+    "dam": "Lagdo Dam (Cameroon)",
+    "announcedAt": "2026-08-24",
+    "affectedRivers": ["Benue River"],
+    "active": false,
+    "note": "NEMA alerted 11 states (Adamawa, Taraba, Benue, Nasarawa, Kogi, Edo, Delta, Anambra, Bayelsa, Cross River, Rivers) on 2026-08-24/25 to a planned controlled release starting at 100 m3/s, escalating to up to 1000 m3/s. NIHSA publicly denied on 2026-08-30 that any release was occurring, stating the dam was still impounding water (209.82m of 216m capacity). Left as inactive/historical pending a clearer confirmed source — this is a real example of conflicting official reports, not a confirmed current release. Re-check before reactivating.",
+    "sourceUrl": "https://www.legit.ng/nigeria/1726981-full-list-11-nigerian-states-threat-cameroon-releases-water-lagdo-dam/"
+  }
+]

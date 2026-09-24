@@ -1,0 +1,93 @@
+[
+  {
+    "id": "niger-lokoja-confluence",
+    "river": "Niger River (at Niger–Benue confluence)",
+    "latitude": 7.7750,
+    "longitude": 6.7250,
+    "note": "Moved from the documented confluence point (7.7533, 6.7567), which landed on a dry GloFAS grid cell (0.05 m3/s). This point was found by a small grid search around it: it returns 8629 m3/s, the right order of magnitude for combined Niger+Benue flow post-confluence. Still worth confirming against satellite imagery."
+  },
+  {
+    "id": "niger-ajaokuta",
+    "river": "Niger River",
+    "latitude": 7.5561,
+    "longitude": 6.6550,
+    "note": "Ajaokuta town, west bank of the Niger. Draft coordinate from Wikipedia; needs river-channel confirmation."
+  },
+  {
+    "id": "niger-ibaji",
+    "river": "Niger River",
+    "latitude": 6.8750,
+    "longitude": 6.5750,
+    "note": "Onyedega (Ibaji LGA HQ) is at 6.8833, 6.6833, but that cell was near-zero discharge (2.23 m3/s). Moved ~11km west by grid search to 6.8750, 6.5750, which returns 7550 m3/s — the actual Niger channel here runs further west of the town than the town-centroid coordinate suggested."
+  },
+  {
+    "id": "benue-makurdi",
+    "river": "Benue River",
+    "latitude": 7.7322,
+    "longitude": 8.5391,
+    "note": "Makurdi town centre on the Benue; a known discharge measurement location (avg ~3,150 m3/s per Wikipedia)."
+  },
+  {
+    "id": "benue-agatu",
+    "river": "Benue River",
+    "latitude": 7.9750,
+    "longitude": 7.9250,
+    "note": "Obagaji (Agatu LGA HQ) is at 7.8917, 7.9094, but that cell was near-zero (0.36 m3/s). Moved ~9km north by grid search to 7.9750, 7.9250, which returns 5740 m3/s and matches the Benue mainstem. Agatu is a historically flood-hit LGA, so this point matters — worth confirming against satellite imagery."
+  },
+  {
+    "id": "benue-guma",
+    "river": "Benue River",
+    "latitude": 7.9541,
+    "longitude": 8.7481,
+    "note": "UNRESOLVED — Guma LGA centroid (Wikidata), headquartered at Gbajimba on the Benue. A grid search out to +-0.1 degrees in every direction (including diagonals) found nothing above 40 m3/s, well below mainstem Benue flows (thousands of m3/s) seen at Makurdi/Yola/Numan — either Gbajimba sits on a minor tributary rather than the mainstem, or the true channel is further away than this search radius. Needs a real GPS/satellite-imagery point before this river point is used for scoring."
+  },
+  {
+    "id": "benue-yola",
+    "river": "Benue River",
+    "latitude": 9.2792,
+    "longitude": 12.4458,
+    "note": "Jimeta (modern Yola), on the Benue downstream of the Lagdo dam (Cameroon) — relevant to the damReleases signal."
+  },
+  {
+    "id": "benue-numan",
+    "river": "Benue River",
+    "latitude": 9.4615,
+    "longitude": 12.0354,
+    "note": "Numan town on the Benue; a known discharge measurement location (avg ~900 m3/s per Wikipedia)."
+  },
+  {
+    "id": "benue-demsa",
+    "river": "Benue River",
+    "latitude": 9.33,
+    "longitude": 12.10,
+    "note": "Low confidence: only a bounding box for Demsa LGA (9°25'-9°42'N, 12°08'-12°13'E) was found, this is its midpoint, not a verified town or river-channel point. Needs a real coordinate before use."
+  },
+  {
+    "id": "niger-onitsha",
+    "river": "Niger River",
+    "latitude": 6.1750,
+    "longitude": 6.7250,
+    "note": "Onitsha town is at 6.1670, 6.7830 (east bank), but that cell was near-zero (7.83 m3/s). Moved ~6km west by grid search to 6.1750, 6.7250, which returns 7481 m3/s and matches the Niger mainstem."
+  },
+  {
+    "id": "niger-atani",
+    "river": "Niger River",
+    "latitude": 6.1250,
+    "longitude": 6.7250,
+    "note": "Atani (Ogbaru LGA HQ) is at 6.1214, 6.7696 (sources also disagreed by ~0.1 deg lat, see actor/data/README.md), and that cell was near-zero (35.6 m3/s). Moved ~5km west by grid search to 6.1250, 6.7250, which returns 7481 m3/s and matches the Niger mainstem — same reading as the corrected Onitsha point just upstream, which is plausible for two towns 11km apart on the same reach."
+  },
+  {
+    "id": "niger-anambra-west",
+    "river": "Niger River (near Anambra River mouth)",
+    "latitude": 6.3633,
+    "longitude": 6.7519,
+    "note": "Nzam, Anambra West LGA headquarters, near where the Anambra River meets the Niger."
+  },
+  {
+    "id": "anambra-river-otuocha",
+    "river": "Anambra River",
+    "latitude": 6.3383,
+    "longitude": 6.8506,
+    "note": "Otuocha, Anambra East LGA headquarters, on the Anambra River (a Niger tributary) near Aguleri."
+  }
+]

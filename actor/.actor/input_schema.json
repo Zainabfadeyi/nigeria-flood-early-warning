@@ -1,0 +1,41 @@
+{
+  "title": "Nigeria Flood Early Warning input",
+  "description": "Check flood risk for one or more Nigerian locations (13 communities across Kogi, Benue, Adamawa and Anambra) over the next 7 and/or 30 days.",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "locations": {
+      "title": "Locations",
+      "type": "array",
+      "description": "REQUIRED. One or more locations to check, each EITHER { \"community\": \"Lokoja\", \"lga\": \"Lokoja\", \"state\": \"Kogi\" } (lga/state are optional fallbacks used if the community name isn't recognised) OR { \"latitude\": 7.7322, \"longitude\": 8.5391, \"label\": \"Near Makurdi\" } (matched to the nearest covered community within 25km). Coverage is currently 13 communities in Kogi, Benue, Adamawa and Anambra — see the README for the full list. A location outside coverage still returns a valid, explained result rather than an error.",
+      "editor": "json",
+      "prefill": [
+        { "community": "Lokoja", "lga": "Lokoja", "state": "Kogi" },
+        { "community": "Makurdi", "lga": "Makurdi", "state": "Benue" },
+        { "latitude": 9.2792, "longitude": 12.4458, "label": "Yola/Jimeta" }
+      ]
+    },
+    "horizons": {
+      "title": "Horizons (days)",
+      "type": "array",
+      "description": "Which forecast windows to score: 7, 30, or both. Defaults to both.",
+      "editor": "json",
+      "default": [7, 30]
+    },
+    "includeSources": {
+      "title": "Include sources",
+      "type": "boolean",
+      "description": "Attach the source references used for each result.",
+      "default": true
+    },
+    "mode": {
+      "title": "Mode",
+      "type": "string",
+      "description": "'check' scores the given locations. 'ingest' refreshes outlook, advisory and baseline data first.",
+      "editor": "select",
+      "enum": ["check", "ingest"],
+      "default": "check"
+    }
+  },
+  "required": ["locations"]
+}

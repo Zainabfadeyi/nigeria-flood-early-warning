@@ -1,0 +1,10 @@
+{
+  "actorSpecification": 1,
+  "name": "nigeria-flood-early-warning",
+  "title": "Nigeria Flood Early Warning",
+  "description": "Community-level flood risk for Nigerian locations over 7 and 30 day horizons, built from NIHSA outlooks/advisories, GloFAS river discharge forecasts, rainfall forecasts and known dam releases.",
+  "version": "0.1",
+  "buildTag": "latest",
+  "input": "./input_schema.json",
+  "dockerfile": "../Dockerfile"
+}

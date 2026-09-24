@@ -1,0 +1,26 @@
+{
+  "name": "nigeria-flood-early-warning",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Nigeria flood early-warning Apify Actor and WhatsApp alert bot.",
+  "workspaces": [
+    "shared",
+    "actor",
+    "bot"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "lint": "eslint .",
+    "test": "npm run test --workspaces --if-present"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.15.0",
+    "eslint": "^9.15.0",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.15.0"
+  }
+}

@@ -1,0 +1,119 @@
+[
+  {
+    "id": "kogi-lokoja",
+    "name": "Lokoja",
+    "lga": "Lokoja",
+    "state": "Kogi",
+    "latitude": 7.8000,
+    "longitude": 6.7400,
+    "riverPointIds": ["niger-lokoja-confluence"]
+  },
+  {
+    "id": "kogi-ajaokuta",
+    "name": "Ajaokuta",
+    "lga": "Ajaokuta",
+    "state": "Kogi",
+    "latitude": 7.5561,
+    "longitude": 6.6550,
+    "riverPointIds": ["niger-ajaokuta"]
+  },
+  {
+    "id": "kogi-ibaji",
+    "name": "Onyedega (Ibaji)",
+    "lga": "Ibaji",
+    "state": "Kogi",
+    "latitude": 6.8833,
+    "longitude": 6.6833,
+    "riverPointIds": ["niger-ibaji"]
+  },
+  {
+    "id": "benue-makurdi",
+    "name": "Makurdi",
+    "lga": "Makurdi",
+    "state": "Benue",
+    "latitude": 7.7322,
+    "longitude": 8.5391,
+    "riverPointIds": ["benue-makurdi"]
+  },
+  {
+    "id": "benue-agatu",
+    "name": "Obagaji (Agatu)",
+    "lga": "Agatu",
+    "state": "Benue",
+    "latitude": 7.8917,
+    "longitude": 7.9094,
+    "riverPointIds": ["benue-agatu"]
+  },
+  {
+    "id": "benue-guma",
+    "name": "Gbajimba (Guma)",
+    "lga": "Guma",
+    "state": "Benue",
+    "latitude": 7.9541,
+    "longitude": 8.7481,
+    "riverPointIds": ["benue-guma"]
+  },
+  {
+    "id": "adamawa-yola",
+    "name": "Yola / Jimeta",
+    "lga": "Yola North",
+    "state": "Adamawa",
+    "latitude": 9.2792,
+    "longitude": 12.4458,
+    "riverPointIds": ["benue-yola"]
+  },
+  {
+    "id": "adamawa-numan",
+    "name": "Numan",
+    "lga": "Numan",
+    "state": "Adamawa",
+    "latitude": 9.4615,
+    "longitude": 12.0354,
+    "riverPointIds": ["benue-numan"]
+  },
+  {
+    "id": "adamawa-demsa",
+    "name": "Demsa",
+    "lga": "Demsa",
+    "state": "Adamawa",
+    "latitude": 9.33,
+    "longitude": 12.10,
+    "riverPointIds": ["benue-demsa"]
+  },
+  {
+    "id": "anambra-onitsha",
+    "name": "Onitsha",
+    "lga": "Onitsha South",
+    "state": "Anambra",
+    "latitude": 6.1670,
+    "longitude": 6.7830,
+    "riverPointIds": ["niger-onitsha"]
+  },
+  {
+    "id": "anambra-atani",
+    "name": "Atani (Ogbaru)",
+    "lga": "Ogbaru",
+    "state": "Anambra",
+    "latitude": 6.1214,
+    "longitude": 6.7696,
+    "riverPointIds": ["niger-atani"]
+  },
+  {
+    "id": "anambra-west-nzam",
+    "name": "Nzam (Anambra West)",
+    "lga": "Anambra West",
+    "state": "Anambra",
+    "latitude": 6.3633,
+    "longitude": 6.7519,
+    "riverPointIds": ["niger-anambra-west"]
+  },
+  {
+    "id": "anambra-otuocha",
+    "name": "Otuocha / Aguleri (Anambra East)",
+    "lga": "Anambra East",
+    "state": "Anambra",
+    "latitude": 6.3383,
+    "longitude": 6.8506,
+    "riverPointIds": ["anambra-river-otuocha"]
+  }
+]

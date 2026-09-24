@@ -1,0 +1,10 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.env
+.env.local
+storage/
+apify_storage/
+bot/.data/
+*.log
+.DS_Store
