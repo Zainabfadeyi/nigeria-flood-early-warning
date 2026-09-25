@@ -115,5 +115,14 @@
     "latitude": 6.3383,
     "longitude": 6.8506,
     "riverPointIds": ["anambra-river-otuocha"]
+  },
+  {
+    "id": "lagos-ikorodu",
+    "name": "Ikorodu",
+    "lga": "Ikorodu",
+    "state": "Lagos",
+    "latitude": 6.600,
+    "longitude": 3.500,
+    "riverPointIds": ["ogun-river-ikorodu"]
   }
 ]

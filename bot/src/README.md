@@ -40,15 +40,15 @@ environment — same honesty pattern as the LLM/PDF pipeline in
 
 ## Design decisions worth knowing about
 
-- **The scheduled Actor run is expected to check all 13 MVP communities,
-  not just currently-subscribed ones.** CLAUDE.md phrases this as "checks
-  all subscribed communities," but keeping the Actor's schedule input
-  dynamically in sync with the bot's live subscriber list would mean the
-  Actor calling back into the bot (or the bot triggering Actor runs itself)
-  — real added complexity for little benefit at 13 communities and
-  pay-per-event pricing, where checking a few unsubscribed communities costs
-  little. `/webhooks/apify/inbound` does the actual "who cares about this
-  community" filtering on the bot side.
+- **The scheduled Actor run is expected to check all MVP communities (14 as
+  of the Lagos/Ikorodu addition), not just currently-subscribed ones.**
+  CLAUDE.md phrases this as "checks all subscribed communities," but keeping
+  the Actor's schedule input dynamically in sync with the bot's live
+  subscriber list would mean the Actor calling back into the bot (or the bot
+  triggering Actor runs itself) — real added complexity for little benefit
+  at this scale and pay-per-event pricing, where checking a few unsubscribed
+  communities costs little. `/webhooks/apify/inbound` does the actual "who
+  cares about this community" filtering on the bot side.
 - **Alert templates aren't registered as approved WhatsApp/Meta Content
   Templates.** CLAUDE.md section 8 calls for business-initiated alerts to
   use approved templates, since WhatsApp requires that outside a 24h

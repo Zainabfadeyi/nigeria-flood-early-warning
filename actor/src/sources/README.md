@@ -213,7 +213,7 @@ above). What's actually running:
   before a real scraper/parser can be designed at all.
 - **`ingest/parsePdf.ts`** and the `LlmProvider` interface (`llm/`) are fully
   implemented — PDF fetch, text extraction, a prompt that scopes extraction
-  to just our 13 communities (so a large national document doesn't need
+  to just our MVP communities (whatever's currently in communities.json, so a large national document doesn't need
   full-document structured extraction), zod validation, and a low-confidence
   review file written to the `nihsa-outlook-review` KV store — but **neither
   is exercised end-to-end in this environment**: the PDF 404s before any LLM

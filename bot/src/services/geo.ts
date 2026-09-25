@@ -39,7 +39,7 @@ export interface TextMatch {
 /**
  * Freeform WhatsApp text -> nearest known community. Deliberately simple
  * (substring matching on name/LGA/state, in that specificity order) rather
- * than a full geocoder — good enough for the 13 MVP communities, and it's
+ * than a full geocoder — good enough for the small set of MVP communities, and it's
  * always followed by a confirmation step in the onboarding flow so a wrong
  * guess isn't silently accepted.
  */

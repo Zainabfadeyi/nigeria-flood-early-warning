@@ -14,7 +14,7 @@ test('falls back to LGA name when the community name is not mentioned', async ()
 });
 
 test('unrecognised free text is outside MVP coverage', async () => {
-  const match = await resolveByText('I am in Lagos Island');
+  const match = await resolveByText('I am in Kano');
   assert.equal(match, null);
 });
 
@@ -25,6 +25,11 @@ test('coordinates near a known community resolve to it', async () => {
 });
 
 test('coordinates far from any MVP community are outside coverage', async () => {
-  const match = await resolveByCoordinates(6.5244, 3.3792); // Lagos
+  const match = await resolveByCoordinates(12.0, 8.52); // Kano
   assert.equal(match, null);
+});
+
+test('coordinates near Ikorodu resolve to it', async () => {
+  const match = await resolveByCoordinates(6.6, 3.5); // Ikorodu
+  assert.equal(match?.community.id, 'lagos-ikorodu');
 });

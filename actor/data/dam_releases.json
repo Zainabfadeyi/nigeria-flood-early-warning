@@ -6,5 +6,13 @@
     "active": false,
     "note": "NEMA alerted 11 states (Adamawa, Taraba, Benue, Nasarawa, Kogi, Edo, Delta, Anambra, Bayelsa, Cross River, Rivers) on 2026-08-24/25 to a planned controlled release starting at 100 m3/s, escalating to up to 1000 m3/s. NIHSA publicly denied on 2026-08-30 that any release was occurring, stating the dam was still impounding water (209.82m of 216m capacity). Left as inactive/historical pending a clearer confirmed source — this is a real example of conflicting official reports, not a confirmed current release. Re-check before reactivating.",
     "sourceUrl": "https://www.legit.ng/nigeria/1726981-full-list-11-nigerian-states-threat-cameroon-releases-water-lagdo-dam/"
+  },
+  {
+    "dam": "Oyan Dam (Ogun State)",
+    "announcedAt": "2024-10-17",
+    "affectedRivers": ["Ogun River"],
+    "active": false,
+    "note": "Lagos State government precautionary alert from 2024-10-17 (not 2026) about a staggered release, naming Kara, Mile 12, Agiliti, Ikosi Ketu, Owode, Ajegunle and Odo-Ogun — not Ikorodu specifically, though it's on the same river system. Left inactive/historical since it's stale (nearly 2 years old at the time this entry was added) and Ikorodu isn't named in it directly. A 2026-06-05 NEMA article separately named Ikorodu/Isheri as vulnerable to 'possible' future Oyan Dam releases without confirming one is happening — re-check for a current, dated announcement before activating.",
+    "sourceUrl": "https://moelagos.gov.ng/lasg-alerts-residents-of-ogun-river-banks-of-water-release-from-oyan-dam/"
   }
 ]

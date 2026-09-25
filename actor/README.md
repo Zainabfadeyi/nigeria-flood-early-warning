@@ -32,8 +32,8 @@ produced it.
 
 ## Coverage (MVP)
 
-Riverine flooding along the Niger–Benue confluence system, where the
-underlying data is strongest — 13 communities across 4 states:
+Riverine flooding along the Niger–Benue confluence system, plus one South
+West pilot community on the Ogun River — 14 communities across 5 states:
 
 | State | Communities |
 |---|---|
@@ -41,6 +41,15 @@ underlying data is strongest — 13 communities across 4 states:
 | Benue | Makurdi, Obagaji (Agatu), Gbajimba (Guma) |
 | Adamawa | Yola/Jimeta, Numan, Demsa |
 | Anambra | Onitsha, Atani (Ogbaru), Nzam (Anambra West), Otuocha/Aguleri (Anambra East) |
+| Lagos | Ikorodu |
+
+Ikorodu is a pilot for expanding beyond the Niger-Benue system: it has a real
+riverine signal (the Ogun River, affected by Oyan Dam releases), unlike most
+of Lagos, which floods mainly from overwhelmed urban drainage — a mechanism
+this Actor doesn't model. Ikorodu's result draws on the same GloFAS/outlook
+signals as every other community; other Lagos LGAs (Lekki, Victoria Island,
+etc.) are not yet covered and would need the same per-community verification
+work before being added.
 
 A location outside this list (or too far from any of these communities) gets
 a clear "outside current coverage" result rather than a guess. Coverage is

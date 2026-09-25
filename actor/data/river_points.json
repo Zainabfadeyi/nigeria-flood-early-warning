@@ -89,5 +89,12 @@
     "latitude": 6.3383,
     "longitude": 6.8506,
     "note": "Otuocha, Anambra East LGA headquarters, on the Anambra River (a Niger tributary) near Aguleri."
+  },
+  {
+    "id": "ogun-river-ikorodu",
+    "river": "Ogun River",
+    "latitude": 6.5250,
+    "longitude": 3.4250,
+    "note": "Ikorodu town centre is at 6.600, 3.500, but that cell was off-channel. Moved ~9km southwest by grid search to 6.5250, 3.4250, which returns 1769 m3/s — a real, substantial reading consistent with the Ogun River, which flows past Isheri (a separate, more river-adjacent community) before reaching Ikorodu and emptying into the Lagos Lagoon. Confirms Ikorodu genuinely has a riverine signal, not just urban drainage flooding — see actor/src/sources/README.md's South West expansion note."
   }
 ]

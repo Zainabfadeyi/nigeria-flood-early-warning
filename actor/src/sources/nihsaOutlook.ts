@@ -96,6 +96,11 @@ const FALLBACK_OUTLOOK_BY_COMMUNITY: Record<string, FallbackRecord> = {
     sourceName: "NIHSA 2026 seasonal climate prediction assessment / Sept 19-25 advisory coverage (Anambra East)",
     sourceUrl: 'https://allafrica.com/stories/202609220244.html',
   },
+  'lagos-ikorodu': {
+    category: 'HIGH',
+    sourceName: 'NEMA flood-preparedness report naming Ikorodu directly, 2026-06-05',
+    sourceUrl: 'https://allafrica.com/stories/202606050458.html',
+  },
 };
 
 let pdfRows: Map<string, CommunityOutlookRow> | null = null;

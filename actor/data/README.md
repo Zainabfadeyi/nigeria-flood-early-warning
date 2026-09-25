@@ -1,12 +1,14 @@
 # Actor data
 
-## communities.json / river_points.json (Phase 2 draft)
+## communities.json / river_points.json
 
-13 communities across the four MVP states (Kogi, Benue, Adamawa, Anambra), each
-linked to one river reference point on the Niger, Benue or Anambra River. This
-is a first pass, below the "20-40 communities" target in `CLAUDE.md` section
-4, meant to be expanded and verified by a human before relying on it for real
-alerts.
+14 communities across five states (Kogi, Benue, Adamawa, Anambra, Lagos),
+each linked to one river reference point on the Niger, Benue, Anambra or
+Ogun River. The original 13 (Phase 2) are a first pass below the "20-40
+communities" target in `CLAUDE.md` section 4, meant to be expanded and
+verified by a human before relying on it for real alerts. Ikorodu (Lagos)
+was added later as a pilot for expanding past the Niger-Benue system — see
+`actor/README.md`'s Coverage section for why it was chosen.
 
 Community coordinates (town/LGA centroids) come from Wikipedia/Wikidata.
 River point coordinates started from those same centroids, then most were
@@ -29,5 +31,10 @@ Known issues still open:
 
 ## dam_releases.json
 
-Not yet created — manual MVP config for announced releases (Lagdo, Kainji,
-Shiroro), planned for Phase 3 alongside `damReleases.ts`.
+Manually curated MVP config (Phase 3). Two entries so far (Lagdo Dam on the
+Benue, Oyan Dam on the Ogun), both currently marked `active: false` — real,
+sourced announcements that turned out to be either contested (Lagdo — NIHSA
+publicly denied it was happening) or stale by the time they were added
+(Oyan — a ~2-year-old precautionary alert). See each entry's `note` for the
+sourcing and why it's inactive. Re-check for a current, dated announcement
+before flipping either to `active: true`.

@@ -22,7 +22,7 @@ import { fetchRainfallForecast, isHeavyRainForecast, RAINFALL_FORECAST_MAX_DAYS 
 
 const BASE_LIMITATIONS = [
   'This is an independent early-warning tool, not an official government warning. Follow local authority guidance.',
-  'Only riverine flood risk along the Niger-Benue system is modelled. Urban/flash flooding from local drainage is not captured (see CLAUDE.md section 3).',
+  'Only riverine flood risk along a modelled river channel is captured (Niger-Benue system, plus the Ogun River near Ikorodu). Urban/flash flooding from local drainage is not captured (see CLAUDE.md section 3).',
 ];
 
 async function loadJsonData(): Promise<{ communities: Community[]; riverPoints: RiverPoint[] }> {
@@ -74,7 +74,7 @@ for (const locationInput of input.locations) {
         days,
         riskLevel: 'NONE' as const,
         confidence: 'low' as const,
-        reasons: ['This location is outside the current MVP coverage area (Kogi, Benue, Adamawa and Anambra communities near the Niger/Benue rivers); no data sources were checked.'],
+        reasons: ['This location is outside the current MVP coverage area (Kogi, Benue, Adamawa, Anambra and Lagos communities near the Niger, Benue and Ogun rivers); no data sources were checked.'],
       })),
       recommendedActions: recommendedActionsForLevel('NONE'),
       sources: [],
