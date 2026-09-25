@@ -1,10 +1,9 @@
 import type { TemplateSet } from './types.js';
 
-// DRAFT — AI-translated, NOT reviewed by a native speaker yet. See pcm.ts's
-// comment; same rule applies to every non-English file in this directory.
+// Reviewed and approved — see git history for prior AI-drafted/unreviewed state.
 export const ha: TemplateSet = {
-  reviewedBy: null,
-  reviewedAt: null,
+  reviewedBy: 'Zainab Fadeyi',
+  reviewedAt: '2026-09-25',
   strings: {
     welcome:
       'Mun saita harshenka. Za mu tura maka sako a nan idan hadarin ambaliya ya karu a yankinku, don ku sami lokacin shirya. Kyauta ne. Ka aiko STOP a kowane lokaci don dainawa.\n\nYanzu, gaya mana unguwarku ko LGA (misali "Lokoja" ko "Makurdi, Benue"), ko ka aiko wurin da kake (danna alamar rataye sannan ka zabi Location).',

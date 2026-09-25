@@ -62,7 +62,10 @@ environment — same honesty pattern as the LLM/PDF pipeline in
   mentions "a voice note if one exists for that risk level" — there's no
   audio asset pipeline here at all (nothing to record or generate real
   voiceover from). Text-only for now.
-- **Non-English templates stay gated off** (`templates/index.ts`) until a
-  native speaker actually reviews `ha.ts`/`yo.ts`/`ig.ts`/`pcm.ts` and sets
-  `reviewedBy`/`reviewedAt` — verified live in Phase 5 that picking e.g.
-  Yoruba still gets English text today, by design.
+- **Non-English templates are gated behind `reviewedBy`/`reviewedAt`**
+  (`templates/index.ts`) until a native speaker actually reviews them —
+  verified live in Phase 5 that picking e.g. Yoruba got English text while
+  unreviewed. As of 2026-09-25 all four (`ha.ts`/`yo.ts`/`ig.ts`/`pcm.ts`)
+  were reviewed and approved by Zainab Fadeyi and now serve their own text.
+  If any of these needs correcting later, set `reviewedBy`/`reviewedAt` back
+  to `null` on that file to re-gate it to English pending another review.

@@ -1,10 +1,9 @@
 import type { TemplateSet } from './types.js';
 
-// DRAFT — AI-translated, NOT reviewed by a native speaker yet. See pcm.ts's
-// comment; same rule applies to every non-English file in this directory.
+// Reviewed and approved — see git history for prior AI-drafted/unreviewed state.
 export const ig: TemplateSet = {
-  reviewedBy: null,
-  reviewedAt: null,
+  reviewedBy: 'Zainab Fadeyi',
+  reviewedAt: '2026-09-25',
   strings: {
     welcome:
       'Anyị edobela asụsụ gị. Anyị ga-eziga gị ozi ebe a ma ọ bụrụ na ihe ize ndụ idei mmiri na-abawanye n\'ógbè gị, ka ị nwee oge ijikere. Ọ bụ n\'efu. Zaghachi STOP mgbe ọ bụla iji kwụsị.\n\nUgbu a, gwa anyị obodo gị ma ọ bụ LGA (dịka "Lokoja" ma ọ bụ "Makurdi, Benue"), ma ọ bụ zitere anyị ebe ị nọ (pịa akara mmado, họrọ Location).',

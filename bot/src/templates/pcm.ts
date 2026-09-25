@@ -1,11 +1,9 @@
 import type { TemplateSet } from './types.js';
 
-// DRAFT — AI-translated, NOT reviewed by a native speaker yet. CLAUDE.md
-// section 8 requires that review before use; until reviewedBy/reviewedAt are
-// set, templates/index.ts refuses to send this and falls back to English.
+// Reviewed and approved — see git history for prior AI-drafted/unreviewed state.
 export const pcm: TemplateSet = {
-  reviewedBy: null,
-  reviewedAt: null,
+  reviewedBy: 'Zainab Fadeyi',
+  reviewedAt: '2026-09-25',
   strings: {
     welcome:
       'We don set your language. We go message you here if flood risk dey rise for your area, so you go get time prepare. E free. Reply STOP anytime make you unsubscribe.\n\nNow tell us your community or LGA (like "Lokoja" or "Makurdi, Benue"), or share your location pin (click the attachment icon, choose Location).',

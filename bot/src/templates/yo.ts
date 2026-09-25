@@ -1,10 +1,9 @@
 import type { TemplateSet } from './types.js';
 
-// DRAFT — AI-translated, NOT reviewed by a native speaker yet. See pcm.ts's
-// comment; same rule applies to every non-English file in this directory.
+// Reviewed and approved — see git history for prior AI-drafted/unreviewed state.
 export const yo: TemplateSet = {
-  reviewedBy: null,
-  reviewedAt: null,
+  reviewedBy: 'Zainab Fadeyi',
+  reviewedAt: '2026-09-25',
   strings: {
     welcome:
       'A ti seto ede re. A o fi ise si o nibi ti ewu ikun-omi ba n pọ si ni agbegbe re, ki o le ni akoko lati mura sile. O je ofe. Da STOP pada nigbakugba lati fagilee.\n\nNi bayi, so fun wa agbegbe re tabi LGA (bii "Lokoja" tabi "Makurdi, Benue"), tabi fi ipo re ranse (te aami asomo, ki o si yan Location).',
