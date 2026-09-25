@@ -1,0 +1,12 @@
+{
+  "actorOutputSchemaVersion": 1,
+  "title": "Nigeria Flood Early Warning output",
+  "description": "One flood-risk result per requested location, written to the run's default dataset. See dataset_schema.json for the shape of each item.",
+  "properties": {
+    "results": {
+      "type": "string",
+      "title": "Flood risk results",
+      "template": "{{links.apiDefaultDatasetUrl}}/items"
+    }
+  }
+}
