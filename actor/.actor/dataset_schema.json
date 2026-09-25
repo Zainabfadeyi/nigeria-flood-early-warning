@@ -1,0 +1,73 @@
+{
+  "actorSpecification": 1,
+  "fields": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "title": "LocationRisk",
+    "description": "One flood-risk result per requested location.",
+    "properties": {
+      "location": {
+        "type": "object",
+        "title": "Location",
+        "description": "The resolved location: label, matched community/LGA/state, and coordinates if known."
+      },
+      "matchedCommunity": {
+        "type": "string",
+        "title": "Matched community ID",
+        "description": "Which of the known MVP communities this location was matched to, if any."
+      },
+      "windows": {
+        "type": "array",
+        "title": "Risk windows",
+        "description": "Risk level, confidence, peak date and reasons for the 7-day and/or 30-day forecast windows."
+      },
+      "recommendedActions": {
+        "type": "array",
+        "title": "Recommended actions",
+        "description": "Fixed list of suggested actions for the highest risk level across all windows."
+      },
+      "sources": {
+        "type": "array",
+        "title": "Sources",
+        "description": "Data sources used to compute this result, with URLs and retrieval timestamps."
+      },
+      "limitations": {
+        "type": "array",
+        "title": "Limitations",
+        "description": "Structural caveats about what this result does and doesn't capture (e.g. urban flash flooding isn't modelled)."
+      },
+      "warnings": {
+        "type": "array",
+        "title": "Warnings",
+        "description": "Notes about failed, stale, or fallback data sources used for this specific result."
+      },
+      "generatedAt": {
+        "type": "string",
+        "format": "date-time",
+        "title": "Generated at",
+        "description": "ISO timestamp when this result was computed."
+      }
+    },
+    "required": ["location", "windows", "recommendedActions", "sources", "limitations", "warnings", "generatedAt"]
+  },
+  "views": {
+    "overview": {
+      "title": "Overview",
+      "description": "Flood risk results, one row per checked location.",
+      "transformation": {
+        "fields": ["location", "matchedCommunity", "windows", "recommendedActions", "warnings", "generatedAt"]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "location": { "label": "Location", "format": "object" },
+          "matchedCommunity": { "label": "Matched community", "format": "text" },
+          "windows": { "label": "Risk windows (7d/30d)", "format": "array" },
+          "recommendedActions": { "label": "Recommended actions", "format": "array" },
+          "warnings": { "label": "Warnings", "format": "array" },
+          "generatedAt": { "label": "Generated at", "format": "date" }
+        }
+      }
+    }
+  }
+}

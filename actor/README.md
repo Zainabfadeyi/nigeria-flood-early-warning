@@ -74,7 +74,7 @@ the underlying river-discharge model doesn't capture it. See Limitations.
 
 | Field | Type | Description |
 |---|---|---|
-| `locations` | array (required) | Each entry is **either** `{ community, lga?, state? }` (matched against the 13 known communities by name, then LGA, then state) **or** `{ latitude, longitude, label? }` (matched to the nearest known community within 25km). |
+| `locations` | array (required) | Each entry is **either** `{ community, lga?, state? }` (matched against the 14 known communities by name, then LGA, then state) **or** `{ latitude, longitude, label? }` (matched to the nearest known community within 25km). |
 | `horizons` | `[7\|30]` | Which forecast windows to return. Default: both. |
 | `includeSources` | boolean | Attach the source URLs used for each result. Default: `true`. |
 | `mode` | `"check"` \| `"ingest"` | `"check"` scores the given locations (default). `"ingest"` additionally attempts to refresh the NIHSA outlook from source before scoring. |
@@ -134,10 +134,51 @@ and `sources/README.md` for how every data source was verified.
 
 ## Pricing
 
-Pay-per-event: billed once per location successfully checked
-(`location-risk-check`), regardless of whether that location resolves to a
-known community or comes back as outside current coverage — either way you
-get a complete, explained answer. Exact price is configured in Apify Console.
+Pay-per-event:
+- **$0.00005** per run (`actor-start`) — a small flat fee, once per run regardless of how many locations you check
+- **$0.003** per location checked (`location-risk-check`) — billed for every location, whether it resolves to a known community or comes back as outside current coverage, since either way you get a complete, explained answer
+
+## How to run it
+
+**From the Apify Store / Console:** open the Actor, go to the **Input** tab
+(it's prefilled with a working example — Lokoja, Makurdi, and Yola/Jimeta by
+name, plus a raw-coordinate example), and click **Start**. Results appear as
+they're computed under the **Output** tab and in the run's dataset.
+
+**Via the Apify API/CLI**, once you have an API token:
+```bash
+curl -X POST "https://api.apify.com/v2/acts/zainab77~nigeria-flood-early-warning/run-sync-get-dataset-items?token=<APIFY_TOKEN>" \
+  -H "Content-Type: application/json" \
+  -d '{"locations": [{"community": "Lokoja", "lga": "Lokoja", "state": "Kogi"}]}'
+```
+`run-sync-get-dataset-items` runs the Actor and returns the dataset directly
+in the response — the simplest way to call it programmatically. For a
+longer-running batch (many locations), use the regular `runs` endpoint and
+poll, or set up a Schedule + Webhook in Console to run it automatically (see
+`bot/src/README.md` for how the companion bot does exactly that).
+
+No environment variables are required to run it — see `sources/README.md`
+for the one optional `LLM_PROVIDER`/`LLM_API_KEY` pair, which only affects a
+currently-unreachable ingest path (NIHSA's site has been down throughout
+development) and has a safe no-op fallback either way.
+
+## Technologies used
+
+- **TypeScript** (strict, ESM, Node 20+), built with the Apify SDK for JS
+- **[Open-Meteo Flood API](https://open-meteo.com/en/docs/flood-api)**
+  (GloFAS v4) for river discharge forecasts and historical baselines
+- **Open-Meteo Weather Forecast API** for rainfall forecasts
+- **NIHSA** (Nigeria Hydrological Services Agency) Annual Flood Outlook and
+  advisories — real per-community data sourced from verified news coverage
+  while nihsa.gov.ng is unreachable, with an LLM-assisted PDF-extraction
+  pipeline (Anthropic Claude, behind a swappable `LlmProvider` interface)
+  ready to take over automatically once the site is back
+- **zod** for runtime validation of all external data (API responses, dataset
+  items, LLM output)
+- **pdf-parse** for PDF text extraction
+- npm workspaces monorepo, shared between this Actor and a companion Express
+  + Twilio WhatsApp bot (`bot/`, deployed separately, not part of this Store
+  listing)
 
 ## Companion WhatsApp bot
 

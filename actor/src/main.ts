@@ -49,6 +49,12 @@ function dedupe(strings: string[]): string[] {
 
 await Actor.init();
 
+// Pay-per-event pricing (CLAUDE.md section 11, Phase 7): a small flat fee
+// per run, on top of the per-location-check charge below. Must match the
+// event name configured in Apify Console under Actor > Monetization exactly,
+// or this charges nothing.
+await Actor.charge({ eventName: 'actor-start' });
+
 const rawInput = await Actor.getInput();
 const input = actorInputSchema.parse(rawInput ?? {});
 const { communities, riverPoints } = await loadJsonData();
