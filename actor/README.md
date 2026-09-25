@@ -190,9 +190,12 @@ when their area's risk genuinely rises — not on every run.
 
 ### Try it
 
-The bot currently runs on Twilio's WhatsApp Sandbox (a shared testing
-number, not yet a dedicated business line), so there's a one-time step
-before it can message you:
+**[Open the one-tap setup page](https://claude.ai/artifact/7gXysj7MTZnzYvycvm2yPw)**
+— two links to tap on your phone, no typing required.
+
+Or manually: the bot currently runs on Twilio's WhatsApp Sandbox (a shared
+testing number, not yet a dedicated business line), so there's a one-time
+step before it can message you:
 
 1. On WhatsApp, send `join inch-motion` to **+1 415 523 8886**. You'll get a
    confirmation that you're connected to the sandbox.
