@@ -185,3 +185,28 @@ development) and has a safe no-op fallback either way.
 This Actor is the data engine behind a WhatsApp alert bot (not part of this
 Actor's Store listing) that lets residents opt in to be notified by WhatsApp,
 in their own language, only when a subscribed community's risk level rises.
+It runs a daily scheduled check against this Actor and only messages someone
+when their area's risk genuinely rises — not on every run.
+
+### Try it
+
+The bot currently runs on Twilio's WhatsApp Sandbox (a shared testing
+number, not yet a dedicated business line), so there's a one-time step
+before it can message you:
+
+1. On WhatsApp, send `join inch-motion` to **+1 415 523 8886**. You'll get a
+   confirmation that you're connected to the sandbox.
+2. Send `JOIN` to the same number to start.
+3. Pick a language (English, Hausa, Yoruba, Igbo or Pidgin), then reply with
+   your community or LGA (e.g. `Lokoja`), or share a WhatsApp location pin.
+4. You're subscribed. You'll only hear from it again when your area's risk
+   level actually changes. Reply `1` anytime for full details on the latest
+   alert, `STOP` to unsubscribe, or `CHANGE` to update your language or
+   location.
+
+Coverage matches this Actor's: the 14 communities listed above.
+
+## Source code
+
+The full source for both this Actor and the WhatsApp bot is open on GitHub:
+**[github.com/Zainabfadeyi/nigeria-flood-early-warning](https://github.com/Zainabfadeyi/nigeria-flood-early-warning)**
